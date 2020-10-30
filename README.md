@@ -54,22 +54,10 @@ CPU和内存的OID私有，根据设备厂家和OS版本可能不同。目前测
 * Linux
 
 #### 二进制安装
-从[这里](https://github.com/gaochao1/swcollector/releases) 下载编译好的最新二进制版本即可。注意：这些二进制只能跑在64位Linux上
+
 
 #### 源码安装
-```
-	依赖$GOPATH/src/github.com/gaochao1/sw
-	cd $GOPATH/src/github.com/gaochao1/swcollector
-	go get ./...
-	chmod +x control
-	./control build
-	./control pack
-	最后一步会pack出一个tar.gz的安装包，拿着这个包去部署服务即可。
-	
-	升级时，确保先更新sw
-	cd $GOPATH/src/github.com/gaochao1/sw
-	git pull
-```
+
 
 #### 部署说明
 
@@ -101,6 +89,7 @@ swcollector需要部署到有交换机SNMP访问权限的服务器上。
  		],
 		"gosnmp":true,         #是否使用 gosnmp 采集, false 则使用 snmpwalk
 		"index_tag":false,     #去掉 index tag 以在 n9e 上获得更好体验
+		"description":true,    #新增 接口描述 tag 以在 n9e 上获得更好体验
  		"pingTimeout":300,     #Ping超时时间，单位毫秒
 		"pingRetry":4,         #Ping探测重试次数
 		"community":"public",  #SNMP认证字符串
