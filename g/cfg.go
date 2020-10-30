@@ -18,6 +18,7 @@ type SwitchConfig struct {
 	Enabled  bool     `json:"enabled"`
 	IpRange  []string `json:"ipRange"`
 	IndexTag bool     `json:"index_tag"`
+	DescriptionTag bool `json:"description_tag"`
 	Gosnmp   bool     `json:"gosnmp"`
 
 	PingTimeout int `json:"pingTimeout"`
