@@ -12,6 +12,7 @@
  		],
 		"gosnmp":true,
 		"index_tag":false,
+		"description_tag":true,
  		"pingTimeout":300,
 		"pingRetry":4,
 		"community":"123456",
